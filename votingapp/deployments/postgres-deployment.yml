@@ -1,0 +1,29 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: postgres-deployment
+  labels:
+    app: kavvotingapp
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      name: postgres-pod
+      app: kavvotingapp
+  template:
+    metatdata:
+      name: postgres-pod
+      labels:
+        name: postgres-pod
+        app: kavvotingapp
+    spec:
+      containers:
+        - name: postgres
+          image: postgres:9.4
+          env:
+            - name: POSTGRES_USER
+              value: "postgres"
+            - name: POSTGRES_PASSWORD
+              value: "postgres"
+          ports:
+            - containerPort: 5432
