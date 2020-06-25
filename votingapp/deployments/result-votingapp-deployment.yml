@@ -5,13 +5,13 @@ metadata:
   labels:
     app: kavvotingapp
 spec:
-  replicas: 1
+  replicas: 3
   selector:
     matchLabels:
       name: result-app
       app: kavvotingapp
   template:
-    metatdata:
+    metadata:
       name: result-app-pod
       labels:
         name: result-app

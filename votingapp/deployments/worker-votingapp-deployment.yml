@@ -11,7 +11,7 @@ spec:
       name: worker-votingapp
       app: kavvotingapp
   template:
-    metatdata:
+    metadata:
       name: worker-app-pod
       labels:
         name: worker-votingapp

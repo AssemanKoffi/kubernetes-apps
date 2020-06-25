@@ -11,7 +11,7 @@ spec:
       name: postgres-pod
       app: kavvotingapp
   template:
-    metatdata:
+    metadata:
       name: postgres-pod
       labels:
         name: postgres-pod
